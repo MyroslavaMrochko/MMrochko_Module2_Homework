@@ -1,0 +1,28 @@
+CREATE DATABASE MMROCHKO_MODULE_2
+on primary
+(name='MMROCHKO_MODULE_2_Primary'
+filename='C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER01\MSSQL\DATA\MMROCHKO_MODULE_2_Prm.mdf'
+size=4MB,
+maxsize=10MB,
+filegrowth=1MB),
+FILEGROUP MMROCHKO_MODULE_2_FG1
+(name='MMROCHKO_MODULE_2_FG1_Dat1',
+filename='C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER01\MSSQL\DATA\MMROCHKO_MODULE_2_FG1.ndf'
+size=1MB,
+maxsize=10MB,
+filegrowth=1MB),
+(name='MMROCHKO_MODULE_2_FG1_Dat2',
+filename='C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER01\MSSQL\DATA\MMROCHKO_MODULE_2_FG2.ndf'
+size=1MB,
+maxsize=10MB,
+filegrowth=1MB),
+log on 
+(name='MMROCHKO_MODULE_2_log',
+filename='C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER01\MSSQL\DATA\MMROCHKO_MODULE_2.ldf'
+size=1MB,
+maxsize=10MB,
+filegrowth=1MB);
+GO
+ALTER DATABASE MMROCHKO_MODULE_2 
+MODIFY FILEGROUP MMROCHKO_MODULE_2_FG1 DEFAULT;
+GO
